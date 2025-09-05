@@ -1,0 +1,21 @@
+@font-face {
+font-family: 'mic';
+src: url("../fonts/mic.ttf") format("truetype"),
+url("../fonts/mic.eot") format("embedded-opentype"),
+url("../fonts/mic.woff") format("woff");
+}
+.mic {
+    font-family: 'mic' !important;
+    font-size: 18px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$icons: (
+"mic-Group16": "\ea01",
+"mic-Group20": "\ea02"
+);
+@each $name, $glyph in $icons {
+.#{$name}:before { content: $glyph; }
+}

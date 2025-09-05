@@ -1,0 +1,41 @@
+.expandable{
+
+}
+
+.expandable .brief > {
+
+}
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.grid .card{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 20px;
+  max-height: 150px;
+  color: white;
+  cursor: pointer;
+  gap: 1ch;
+  border-radius: 6px;
+}
+
+.card img{
+  display: flex;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1 !important;
+}
