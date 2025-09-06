@@ -1,0 +1,6 @@
+:host {
+  position: absolute;
+  min-width: 100px;
+  min-height: 100px;
+  background: var(--primary-color);
+}

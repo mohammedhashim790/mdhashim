@@ -1,22 +1,11 @@
 @font-face {
-    font-family: 'mic';
-    src: url("./mic.ttf") format("truetype"),
-    url("./mic.eot") format("embedded-opentype"),
-    url("./mic.woff") format("woff");
+font-family: 'mic';
+src: url("./mic.ttf") format("truetype"),
+url("./mic.eot") format("embedded-opentype"),
+url("./mic.woff") format("woff");
 }
-
-.mic {
-    font-family: 'mic' !important;
-    font-size: 18px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.mic-Group16:before {
-    content: "\ea01";
-}
-
-.mic-Group20:before {
-    content: "\ea02";
-}
+.mic-shrink:before { content: "\ea01"; }
+.mic-expand:before { content: "\ea02"; }
+.mic-linkedin:before { content: "\ea03"; }
+.mic-git:before { content: "\ea04"; }
+.mic-medium:before { content: "\ea05"; }

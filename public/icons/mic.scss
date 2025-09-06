@@ -13,8 +13,11 @@ url("../fonts/mic.woff") format("woff");
 }
 
 $icons: (
-"mic-Group16": "\ea01",
-"mic-Group20": "\ea02"
+"mic-shrink": "\ea01",
+"mic-expand": "\ea02",
+"mic-linkedin": "\ea03",
+"mic-git": "\ea04",
+"mic-medium": "\ea05"
 );
 @each $name, $glyph in $icons {
 .#{$name}:before { content: $glyph; }
