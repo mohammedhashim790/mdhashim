@@ -1,7 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
+import {WINDOW} from '../../bloc/directive/utils/window';
+import {RouterLink} from '@angular/router';
 
 @Component({
-  selector: 'app-home', imports: [], templateUrl: './home.html', styleUrl: './home.css',
+  selector: 'app-home', imports: [
+    RouterLink
+  ], templateUrl: './home.html', styleUrl: './home.css',
 })
 export class Home implements OnInit {
 
@@ -10,7 +14,8 @@ export class Home implements OnInit {
   public linkedIn: string = "https://www.linkedin.com/in/mdhashim/";
   public github: string = "https://github.com/mohammedhashim790";
   public medium: string = "https://medium.com/@mohammedhashim790";
-  protected readonly window = window;
+
+  protected readonly window = inject(WINDOW);
 
   ngOnInit(): void {
   }

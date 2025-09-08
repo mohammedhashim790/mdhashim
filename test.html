@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .grid-container {
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      padding: 10px;
+      gap: 10px;
+      box-sizing: border-box;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .grid-item {
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      font-size: 1.2rem;
+    }
+
+    .center {
+      grid-column: span 2;
+      grid-row: span 3;
+      background-color: #e0e0e0;
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="grid-container">
+  <div class="grid-item item1">New ways to navigate</div>
+  <div class="grid-item item2">Palette</div>
+  <div class="grid-item item3">Snoopy</div>
+  <div class="grid-item item4">Fitness+</div>
+  <div class="grid-item item5">Smart Stack</div>
+  <div class="grid-item item6">watchOS</div>
+</div>
+
+
+
+
+
+</body>
+
+</html>

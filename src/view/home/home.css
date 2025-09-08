@@ -1,10 +1,14 @@
 :host{
+  width: 100%;
+  max-width: 680px;
+  min-height: 100vh;
+  margin: auto;
   position: relative;
+  display: block;
+  padding: 4ch 2ch;
 }
 
-.expandable{
 
-}
 
 .grid{
   display: flex;
@@ -42,5 +46,4 @@
   width: 30px;
   object-position: center;
   object-fit: cover;
-
 }
