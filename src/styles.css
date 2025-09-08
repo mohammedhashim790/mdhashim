@@ -33,7 +33,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   margin-inline: auto;
-  /*cursor: none;*/
+  cursor: none;
   background: var(--primary-background);
 
 

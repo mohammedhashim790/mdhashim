@@ -1,3 +1,9 @@
+:host {
+  --primary-scale-factor: 1.1;
+
+  overflow: clip;
+}
+
 .grid-container {
   display: grid;
   width: 100vw;
@@ -5,9 +11,22 @@
   padding: 10px;
   gap: 10px;
   box-sizing: border-box;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*Colx X Rows = 4 X 4*/
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  overflow: hidden;
 }
+
+p, ul, li {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  text-overflow: ellipsis;
+}
+
+p {
+  margin: 0;
+}
+
 .grid-container div {
   display: flex;
   flex-direction: column;
@@ -18,17 +37,165 @@
   -webkit-backdrop-filter: blur(5px);
   padding: 1ch;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: iphoneUnlock 0.9s ease-out forwards;
+  opacity: 0;
+  transform: scale(var(--primary-scale-factor));
 }
 
-div h2, div h3{
+div h2, div h3 {
   padding: 0;
+  margin: 0;
 }
 
-ul{
+ul {
   margin: 0;
 }
 
 .summary {
-  grid-column: span 2;
-  grid-row: span 3;
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+#status {
+  font-weight: 500;
+  font-size: 1ch;
+}
+
+.bold-500 {
+  font-weight: 500;
+}
+
+
+.summary .profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--primary-color);
+}
+
+.education {
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+
+.pro-exp {
+  grid-column: 4 / span 2;
+  grid-row: 2 / 5;
+}
+
+.pro-exp span {
+  margin: 0.6ch 0;
+}
+
+.project {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 4;
+}
+
+.technical-writing {
+  grid-column: 3/4;
+  grid-row: span 1;
+}
+
+.technical-writing span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2ch;
+  font-size: 1.3ch;
+  align-items: center;
+}
+
+
+.tech-skills {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+
+.tech-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-skills li {
+  margin: 0;
+}
+
+.tech-skills li b {
+  font-weight: 600;
+}
+
+.pro-exp small {
+  font-size: 0.7rem;
+}
+
+.contributions {
+  grid-column: 1 / 3;
+  grid-row: 4;
+}
+
+
+.social-icons {
+  display: flex;
+  width: 20%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-icons img {
+  width: 15px;
+  object-position: center;
+  object-fit: cover;
+}
+
+
+/* iPhone unlock animation */
+@keyframes iphoneUnlock {
+  0% {
+    opacity: 0;
+    transform: scale(var(--primary-scale-factor));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.grid-container div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.grid-container div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.grid-container div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.grid-container div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.grid-container div:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.grid-container div:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.grid-container div:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+
