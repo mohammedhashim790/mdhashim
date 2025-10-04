@@ -1,4 +1,4 @@
-:host{
+:host {
   width: 100%;
   max-width: 680px;
   min-height: 100vh;
@@ -9,15 +9,14 @@
 }
 
 
-
-.grid{
+.grid {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
 }
 
-.grid .card{
+.grid .card {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -29,21 +28,79 @@
 }
 
 
-.card .content{
+.card .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 1 !important;
 }
 
-.social-icons{
+.social-icons {
   display: flex;
   width: 120px;
   flex-direction: row;
   justify-content: space-between;
 }
-.social-icons img{
+
+.social-icons img {
   width: 30px;
   object-position: center;
   object-fit: cover;
+}
+
+.lang {
+  display: flex;
+  margin-left: auto;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333;
+  transition: 0.4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+}
+.slider label{
+  font-size: 12px;
+  flex: 1;
+}
+
+.slider:before {
+  height: 17px;
+  width: 17px;
+  left: 0px;
+  bottom: 3px;
+  background-color: #FFF;
+  transition: 0.4s;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  content: "";
+}
+
+input:checked + .slider {
+  background-color: #060;
+}
+
+input:checked + .slider:before {
+  transform: translate(16px, -50%)
 }
