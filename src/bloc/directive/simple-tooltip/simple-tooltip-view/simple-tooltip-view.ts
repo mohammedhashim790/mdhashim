@@ -1,6 +1,6 @@
 import {Component, ComponentRef, HostListener, inject, Input, OnInit, ViewContainerRef} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
-import {SimpleTooltip} from '../../simple-tooltip';
+import {SimpleTooltip} from '../simple-tooltip';
 
 @Component({
   selector: '',

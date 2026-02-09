@@ -7,7 +7,7 @@ import {
     inputBinding,
     ViewContainerRef
 } from '@angular/core';
-import {SimpleTooltipView} from "./simple-tooltip-view/simple-tooltip-view/simple-tooltip-view";
+import {SimpleTooltipView} from "./simple-tooltip-view/simple-tooltip-view";
 
 @Directive({
     selector: '[simple-tooltip]'
