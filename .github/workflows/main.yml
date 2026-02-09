@@ -50,5 +50,5 @@ jobs:
           AWS_DEFAULT_REGION: 'us-east-1'
         run: |
           echo "Provisioning website to s3."
-          aws s3 cp dist s3://build-app --recursive
+          aws s3 cp dist s3://mdhashim.dev --recursive
           echo "Successfully provisioned the app to S3."
