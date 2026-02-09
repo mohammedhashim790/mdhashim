@@ -1,59 +1,81 @@
-# Mdhashim
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+# mdhashim.com
 
-## Development server
+This project is built in Angular, a personal portfolio website and its server-side rendering (SSR) support.
 
-To start a local development server, run:
+# Summary: 
+Angular (TypeScript) application with optional SSR using Express. The app is organized under `src/` and built with the Angular CLI.
 
-```bash
-ng serve
+## Key Points
+
+- **Framework:** Angular
+- **Language:** TypeScript
+- **SSR:** Angular Universal / Express (server bundle in `dist/`)
+- **Build tooling:** Angular CLI (npm scripts configured in `package.json`)
+
+## Versions
+
+- **Angular:** 20.x — project dependencies include `@angular/core` ^20.1.0, `@angular/ssr` ^20.2.2, and `@angular/cli` ^20.1.6
+- **Node.js:** Recommended 20.x — development uses `@types/node` ^20.17.19 (use Node 20 LTS for development/build)
+
+## Project layout
+```
+- angular.json               - Angular workspace config
+- package.json               - npm scripts & dependencies
+- src/                      - Application source (client + server entry points)
+   - main.ts                 - Browser bootstrap
+   - main.server.ts          - Server bootstrap for SSR
+   - server.ts               - Express server (SSR hosting)
+   - build-version.js        - build helper script
+   - view/                   - app views and components
+   - bloc/                   - app blocs and directives
+- public/                   - static assets served by the app
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open the `src/` folder for app-specific components, routes, and styles.
 
-## Code scaffolding
+## Useful npm scripts
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `npm install` — install dependencies
+- `npm start` — runs `ng serve` (development server)
+- `npm run build` — builds the app (development build)
+- `npm run build-app` — runs `node src/build-version.js` and builds a production bundle
+- `npm run watch` — rebuilds on change (development watch)
+- `npm test` — runs unit tests
+- `npm run serve:ssr:mdhashim` — run the production / built SSR server bundle (`node dist/mdhashim/server/server.mjs`)
 
-```bash
-ng generate component component-name
-```
+## Local development
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+1. Install dependencies:
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+2. Run dev server (live-reload):
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+3. Build production (static + server bundle):
 
 ```bash
-ng e2e
+npm run build-app
+# after a successful build you can run the server bundle:
+npm run serve:ssr:mdhashim
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Notes on SSR
 
-## Additional Resources
+The repository includes server entrypoints (`main.server.ts`, `server.ts`) and a script to launch the server bundle from `dist/`. Use `build-app` to create a production build suitable for SSR.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contributing
+
+Contributions not accepted :)
+
+## License
+
+This project is available under the MIT License.
+
